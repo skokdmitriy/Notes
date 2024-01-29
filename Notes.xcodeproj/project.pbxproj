@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2CB471882B68180700528E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471872B68180700528E38 /* AppDelegate.swift */; };
 		2CB4718C2B68180700528E38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4718B2B68180700528E38 /* ViewController.swift */; };
-		2CB471922B68180700528E38 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471902B68180700528E38 /* Notes.xcdatamodeld */; };
+		2CB471922B68180700528E38 /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471902B68180700528E38 /* Note.xcdatamodeld */; };
 		2CB471942B68180900528E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB471932B68180900528E38 /* Assets.xcassets */; };
 		2CB471972B68180900528E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB471952B68180900528E38 /* LaunchScreen.storyboard */; };
 		2CB471A02B68184300528E38 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2CB4719F2B68184300528E38 /* SnapKit */; };
@@ -58,14 +58,38 @@
 		2CB471862B68180700528E38 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				2CB471872B68180700528E38 /* AppDelegate.swift */,
+				2CB471A32B681C3400528E38 /* Application */,
 				2CB4718B2B68180700528E38 /* ViewController.swift */,
-				2CB471932B68180900528E38 /* Assets.xcassets */,
-				2CB471952B68180900528E38 /* LaunchScreen.storyboard */,
-				2CB471982B68180900528E38 /* Info.plist */,
-				2CB471902B68180700528E38 /* Notes.xcdatamodeld */,
+				2CB471A52B681CB100528E38 /* Resources  */,
+				2CB471A42B681C8700528E38 /* SupportingFiles */,
+				2CB471902B68180700528E38 /* Note.xcdatamodeld */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		2CB471A32B681C3400528E38 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2CB471872B68180700528E38 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2CB471A42B681C8700528E38 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2CB471952B68180900528E38 /* LaunchScreen.storyboard */,
+				2CB471982B68180900528E38 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2CB471A52B681CB100528E38 /* Resources  */ = {
+			isa = PBXGroup;
+			children = (
+				2CB471932B68180900528E38 /* Assets.xcassets */,
+			);
+			path = "Resources ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +171,7 @@
 			files = (
 				2CB4718C2B68180700528E38 /* ViewController.swift in Sources */,
 				2CB471882B68180700528E38 /* AppDelegate.swift in Sources */,
-				2CB471922B68180700528E38 /* Notes.xcdatamodeld in Sources */,
+				2CB471922B68180700528E38 /* Note.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +317,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CV78LQALG6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Notes/Info.plist;
+				INFOPLIST_FILE = Notes/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
@@ -324,7 +348,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CV78LQALG6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Notes/Info.plist;
+				INFOPLIST_FILE = Notes/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
@@ -394,13 +418,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		2CB471902B68180700528E38 /* Notes.xcdatamodeld */ = {
+		2CB471902B68180700528E38 /* Note.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				2CB471912B68180700528E38 /* Notes.xcdatamodel */,
 			);
 			currentVersion = 2CB471912B68180700528E38 /* Notes.xcdatamodel */;
-			path = Notes.xcdatamodeld;
+			path = Note.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
