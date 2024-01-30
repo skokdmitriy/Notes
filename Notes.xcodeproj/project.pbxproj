@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		2CB471882B68180700528E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471872B68180700528E38 /* AppDelegate.swift */; };
-		2CB4718C2B68180700528E38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4718B2B68180700528E38 /* ViewController.swift */; };
-		2CB471922B68180700528E38 /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471902B68180700528E38 /* Note.xcdatamodeld */; };
+		2CB471922B68180700528E38 /* NoteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471902B68180700528E38 /* NoteModel.xcdatamodeld */; };
 		2CB471942B68180900528E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB471932B68180900528E38 /* Assets.xcassets */; };
 		2CB471972B68180900528E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB471952B68180900528E38 /* LaunchScreen.storyboard */; };
 		2CB471A02B68184300528E38 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2CB4719F2B68184300528E38 /* SnapKit */; };
 		2CB471A22B68184300528E38 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2CB471A12B68184300528E38 /* SnapKit-Dynamic */; };
+		2CB471A92B681E8A00528E38 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471A82B681E8A00528E38 /* NoteViewController.swift */; };
+		2CB471AC2B693F4600528E38 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471AB2B693F4600528E38 /* DataManager.swift */; };
+		2CB471B32B69434B00528E38 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471B22B69434B00528E38 /* NoteViewModel.swift */; };
+		2CB471B52B69438500528E38 /* NoteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471B42B69438500528E38 /* NoteRouter.swift */; };
+		2CB471B72B6943B200528E38 /* NoteAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471B62B6943B200528E38 /* NoteAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2CB471842B68180700528E38 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB471872B68180700528E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2CB4718B2B68180700528E38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2CB471912B68180700528E38 /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
 		2CB471932B68180900528E38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CB471962B68180900528E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CB471982B68180900528E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CB471A82B681E8A00528E38 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoteViewController.swift; path = Notes/NoteScreen/NoteViewController.swift; sourceTree = SOURCE_ROOT; };
+		2CB471AB2B693F4600528E38 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2CB471B22B69434B00528E38 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		2CB471B42B69438500528E38 /* NoteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRouter.swift; sourceTree = "<group>"; };
+		2CB471B62B6943B200528E38 /* NoteAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +66,11 @@
 		2CB471862B68180700528E38 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				2CB471AA2B681F1800528E38 /* Storage */,
+				2CB471A62B681E1300528E38 /* NoteScreen */,
 				2CB471A32B681C3400528E38 /* Application */,
-				2CB4718B2B68180700528E38 /* ViewController.swift */,
 				2CB471A52B681CB100528E38 /* Resources  */,
 				2CB471A42B681C8700528E38 /* SupportingFiles */,
-				2CB471902B68180700528E38 /* Note.xcdatamodeld */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -90,6 +98,34 @@
 				2CB471932B68180900528E38 /* Assets.xcassets */,
 			);
 			path = "Resources ";
+			sourceTree = "<group>";
+		};
+		2CB471A62B681E1300528E38 /* NoteScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2CB471A72B681E3000528E38 /* Model */,
+				2CB471A82B681E8A00528E38 /* NoteViewController.swift */,
+				2CB471B22B69434B00528E38 /* NoteViewModel.swift */,
+				2CB471B42B69438500528E38 /* NoteRouter.swift */,
+				2CB471B62B6943B200528E38 /* NoteAssembly.swift */,
+			);
+			path = NoteScreen;
+			sourceTree = "<group>";
+		};
+		2CB471A72B681E3000528E38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CB471902B68180700528E38 /* NoteModel.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2CB471AA2B681F1800528E38 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				2CB471AB2B693F4600528E38 /* DataManager.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB4718C2B68180700528E38 /* ViewController.swift in Sources */,
+				2CB471B32B69434B00528E38 /* NoteViewModel.swift in Sources */,
+				2CB471A92B681E8A00528E38 /* NoteViewController.swift in Sources */,
+				2CB471B72B6943B200528E38 /* NoteAssembly.swift in Sources */,
+				2CB471AC2B693F4600528E38 /* DataManager.swift in Sources */,
 				2CB471882B68180700528E38 /* AppDelegate.swift in Sources */,
-				2CB471922B68180700528E38 /* Note.xcdatamodeld in Sources */,
+				2CB471B52B69438500528E38 /* NoteRouter.swift in Sources */,
+				2CB471922B68180700528E38 /* NoteModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,13 +458,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		2CB471902B68180700528E38 /* Note.xcdatamodeld */ = {
+		2CB471902B68180700528E38 /* NoteModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				2CB471912B68180700528E38 /* Notes.xcdatamodel */,
 			);
 			currentVersion = 2CB471912B68180700528E38 /* Notes.xcdatamodel */;
-			path = Note.xcdatamodeld;
+			path = NoteModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
