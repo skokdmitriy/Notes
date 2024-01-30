@@ -25,30 +25,36 @@ final class NoteViewModel {
     }
 
     func saveButtonAction(_ text: String) {
-        guard selectedNote != nil,
-              let selectedNote = selectedNote else {
-            return dataManager.addNote(text: text)
-        }
-        selectedNote.text = text
-        dataManager.save()
+        saveNote(text: text)
     }
 
     func backButtonAction(_ text: String) {
         popToRoot()
-        guard selectedNote != nil,
-              let selectedNote = selectedNote else {
-            return
-        }
-        selectedNote.text = text
-        dataManager.save()
-        print("back")
+        saveNote(text: text)
     }
-
 
     private func getNote() {
         guard let index else {
             return
         }
         selectedNote = dataManager.getNote(noteIndex: index)
+    }
+
+//        private func saveNote(text: String) {
+//            guard selectedNote != nil,
+//                  let selectedNote = selectedNote else {
+//                return /*dataManager.addNote(text: text)*/
+//            }
+//            selectedNote.text = text
+//            dataManager.save()
+//        }
+
+    private func saveNote(text: String) {
+        if selectedNote != nil {
+            selectedNote?.text = text
+            dataManager.save()
+        } else {
+            dataManager.addNote(text: text)
+        }
     }
 }

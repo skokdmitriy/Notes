@@ -18,6 +18,11 @@
 		2CB471B32B69434B00528E38 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471B22B69434B00528E38 /* NoteViewModel.swift */; };
 		2CB471B52B69438500528E38 /* NoteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471B42B69438500528E38 /* NoteRouter.swift */; };
 		2CB471B72B6943B200528E38 /* NoteAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471B62B6943B200528E38 /* NoteAssembly.swift */; };
+		2CB471BA2B694FBE00528E38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471B92B694FBE00528E38 /* MainViewController.swift */; };
+		2CB471BC2B694FF400528E38 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471BB2B694FF400528E38 /* MainTableViewCell.swift */; };
+		2CB471BE2B6951B600528E38 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471BD2B6951B600528E38 /* MainViewModel.swift */; };
+		2CB471C02B6956D800528E38 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471BF2B6956D800528E38 /* MainAssembly.swift */; };
+		2CB471C22B695A2500528E38 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471C12B695A2500528E38 /* MainRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		2CB471B22B69434B00528E38 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		2CB471B42B69438500528E38 /* NoteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRouter.swift; sourceTree = "<group>"; };
 		2CB471B62B6943B200528E38 /* NoteAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteAssembly.swift; sourceTree = "<group>"; };
+		2CB471B92B694FBE00528E38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2CB471BB2B694FF400528E38 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		2CB471BD2B6951B600528E38 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		2CB471BF2B6956D800528E38 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		2CB471C12B695A2500528E38 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,7 @@
 			children = (
 				2CB471AA2B681F1800528E38 /* Storage */,
 				2CB471A62B681E1300528E38 /* NoteScreen */,
+				2CB471B82B694F8400528E38 /* MainScreen */,
 				2CB471A32B681C3400528E38 /* Application */,
 				2CB471A52B681CB100528E38 /* Resources  */,
 				2CB471A42B681C8700528E38 /* SupportingFiles */,
@@ -126,6 +137,18 @@
 				2CB471AB2B693F4600528E38 /* DataManager.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		2CB471B82B694F8400528E38 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2CB471B92B694FBE00528E38 /* MainViewController.swift */,
+				2CB471BB2B694FF400528E38 /* MainTableViewCell.swift */,
+				2CB471BD2B6951B600528E38 /* MainViewModel.swift */,
+				2CB471BF2B6956D800528E38 /* MainAssembly.swift */,
+				2CB471C12B695A2500528E38 /* MainRouter.swift */,
+			);
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,13 +228,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB471C02B6956D800528E38 /* MainAssembly.swift in Sources */,
 				2CB471B32B69434B00528E38 /* NoteViewModel.swift in Sources */,
+				2CB471BC2B694FF400528E38 /* MainTableViewCell.swift in Sources */,
 				2CB471A92B681E8A00528E38 /* NoteViewController.swift in Sources */,
 				2CB471B72B6943B200528E38 /* NoteAssembly.swift in Sources */,
+				2CB471C22B695A2500528E38 /* MainRouter.swift in Sources */,
 				2CB471AC2B693F4600528E38 /* DataManager.swift in Sources */,
+				2CB471BE2B6951B600528E38 /* MainViewModel.swift in Sources */,
 				2CB471882B68180700528E38 /* AppDelegate.swift in Sources */,
 				2CB471B52B69438500528E38 /* NoteRouter.swift in Sources */,
 				2CB471922B68180700528E38 /* NoteModel.xcdatamodeld in Sources */,
+				2CB471BA2B694FBE00528E38 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

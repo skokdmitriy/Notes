@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class NoteViewController: UIViewController {
+final class NoteViewController: UIViewController {
     // MARK: - Views
 
     private lazy var textView: UITextView = {
@@ -88,7 +88,11 @@ class NoteViewController: UIViewController {
     }
 
     @objc private func backButtonAction() {
-        viewModel.backButtonAction(textView.text)
+        if textView.text.isEmpty == true {
+            viewModel.popToRoot()
+        } else {
+            viewModel.backButtonAction(textView.text)
+        }
     }
 }
 

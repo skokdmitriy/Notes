@@ -11,7 +11,7 @@ final class NoteRouter {
     weak var viewController: UIViewController?
 
     func popToRootViewController() {
-        if let viewController = viewController {
+        if let viewController {
             viewController.navigationController?.popToRootViewController(animated: true)
         }
     }
