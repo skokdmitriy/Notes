@@ -102,7 +102,7 @@ final class NoteViewController: UIViewController {
 
 private extension NoteViewController {
     func setupNavigationBar() {
-        let leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"),
+        let leftBarButtonItem = UIBarButtonItem(image: R.Image.backButton,
                                                 style: .plain,
                                                 target: self,
                                                 action: #selector(backButtonAction)

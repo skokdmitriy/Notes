@@ -15,7 +15,9 @@ final class MainViewController: UIViewController {
         let tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(NoteTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(NoteTableViewCell.self,
+                           forCellReuseIdentifier: R.String.noteCellReuseIdentifier
+        )
         return tableView
     }()
 
@@ -70,7 +72,7 @@ final class MainViewController: UIViewController {
     }
 
     private func configureNavigationBar() {
-        title = "Notes"
+        title = R.String.mainTitle
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.backButtonTitle = ""
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
@@ -92,8 +94,9 @@ extension MainViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
-                                                       for: indexPath
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: R.String.noteCellReuseIdentifier,
+            for: indexPath
         ) as? NoteTableViewCell else {
             return UITableViewCell()
         }
@@ -102,7 +105,7 @@ extension MainViewController: UITableViewDataSource {
         if let noteText = note.text {
             cell.configureCell(text: noteText)
         } else {
-            print("text is empty")
+            print(R.String.textIsEmpty)
         }
         return cell
     }

@@ -23,6 +23,7 @@
 		2CB471BE2B6951B600528E38 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471BD2B6951B600528E38 /* MainViewModel.swift */; };
 		2CB471C02B6956D800528E38 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471BF2B6956D800528E38 /* MainAssembly.swift */; };
 		2CB471C22B695A2500528E38 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471C12B695A2500528E38 /* MainRouter.swift */; };
+		2CB471C42B6A91DF00528E38 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB471C32B6A91DF00528E38 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		2CB471BD2B6951B600528E38 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		2CB471BF2B6956D800528E38 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		2CB471C12B695A2500528E38 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		2CB471C32B6A91DF00528E38 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				2CB471932B68180900528E38 /* Assets.xcassets */,
+				2CB471C32B6A91DF00528E38 /* Constants.swift */,
 			);
 			path = "Resources ";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				2CB471B72B6943B200528E38 /* NoteAssembly.swift in Sources */,
 				2CB471C22B695A2500528E38 /* MainRouter.swift in Sources */,
 				2CB471AC2B693F4600528E38 /* DataManager.swift in Sources */,
+				2CB471C42B6A91DF00528E38 /* Constants.swift in Sources */,
 				2CB471BE2B6951B600528E38 /* MainViewModel.swift in Sources */,
 				2CB471882B68180700528E38 /* AppDelegate.swift in Sources */,
 				2CB471B52B69438500528E38 /* NoteRouter.swift in Sources */,

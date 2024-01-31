@@ -47,8 +47,8 @@ final class MainViewModel {
     // MARK: - Private functions
 
     private func firstRun() {
-        if !UserDefaults.standard.bool(forKey: "isFirstRun") {
-            UserDefaults.standard.set(true, forKey: "isFirstRun")
+        if !UserDefaults.standard.bool(forKey: R.String.isFirstRun) {
+            UserDefaults.standard.set(true, forKey: R.String.isFirstRun)
             notesArray = dataManager.loadDemoNote()
         } else {
             fetchNotes()

@@ -23,11 +23,11 @@ final class DataManager {
     }
 
     func loadDemoNote() -> [NoteEntity] {
-        addNote(text: "hi xcode")
+        addNote(text: R.String.testNote)
         do {
             fetchingNotes = try context.fetch(request)
         } catch {
-            print("Error load Note")
+            print(R.String.errorLoad)
         }
         return fetchingNotes
     }
@@ -36,7 +36,7 @@ final class DataManager {
         do {
             fetchingNotes = try context.fetch(request)
         } catch {
-            print("Error load Note")
+            print(R.String.errorLoad)
         }
         return fetchingNotes
     }
@@ -45,7 +45,7 @@ final class DataManager {
         do {
             try context.save()
         } catch {
-            print("error saving data")
+            print(R.String.errorSaving)
         }
     }
 
