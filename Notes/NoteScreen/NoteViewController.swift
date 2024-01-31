@@ -85,6 +85,7 @@ final class NoteViewController: UIViewController {
 
     @objc private func saveButtonAction () {
         viewModel.saveNote(text: textView.text)
+        navigationItem.rightBarButtonItem?.isEnabled = false
     }
 
     @objc private func backButtonAction() {
@@ -111,7 +112,6 @@ private extension NoteViewController {
         navigationItem.leftBarButtonItem = leftBarButtonItem
     }
 }
-
 
 // MARK: - Setup Keyboard
 
