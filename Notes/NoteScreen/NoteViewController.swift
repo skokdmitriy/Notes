@@ -84,14 +84,15 @@ final class NoteViewController: UIViewController {
     }
 
     @objc private func saveButtonAction () {
-        viewModel.saveButtonAction(textView.text)
+        viewModel.saveNote(text: textView.text)
     }
 
     @objc private func backButtonAction() {
         if textView.text.isEmpty == true {
             viewModel.popToRoot()
         } else {
-            viewModel.backButtonAction(textView.text)
+            viewModel.saveNote(text: textView.text)
+            viewModel.popToRoot()
         }
     }
 }

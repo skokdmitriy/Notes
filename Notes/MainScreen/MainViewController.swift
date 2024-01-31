@@ -2,10 +2,8 @@
 //  MainViewController.swift
 //  Notes
 //
-//  Created by Дмитрий Скок on 30.01.2024.
+//  Created by Дмитрий Скок.
 //
-
-import UIKit
 
 import UIKit
 import SnapKit
@@ -41,11 +39,11 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        embedView()
         setupLayout()
+        setupAppearance()
         configureNavigationBar()
-
-        view.backgroundColor = .systemBackground
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -55,12 +53,20 @@ final class MainViewController: UIViewController {
         tableView.reloadData()
     }
 
-    private func setupLayout() {
-        view.addSubview(tableView)
+    // MARK: - Private functions
 
+    private func embedView() {
+        view.addSubview(tableView)
+    }
+
+    private func setupLayout() {
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+
+    private func setupAppearance() {
+        view.backgroundColor = .systemBackground
     }
 
     private func configureNavigationBar() {
@@ -74,8 +80,7 @@ final class MainViewController: UIViewController {
     }
 
     @objc private func addNewNote() {
-        let vc = NoteAssembly.create()
-        navigationController?.pushViewController(vc, animated: true)
+        viewModel.tapOnNewNote()
     }
 }
 
@@ -87,12 +92,18 @@ extension MainViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? NoteTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
+                                                       for: indexPath
+        ) as? NoteTableViewCell else {
             return UITableViewCell()
         }
 
         let note = viewModel.notesArray[indexPath.row]
-        cell.configureCell(text: note.text ?? "default value")
+        if let noteText = note.text {
+            cell.configureCell(text: noteText)
+        } else {
+            print("text is empty")
+        }
         return cell
     }
 }

@@ -2,7 +2,7 @@
 //  MainAssembly.swift
 //  Notes
 //
-//  Created by Дмитрий Скок on 30.01.2024.
+//  Created by Дмитрий Скок.
 //
 
 import UIKit

@@ -76,10 +76,10 @@
 		2CB471862B68180700528E38 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				2CB471A32B681C3400528E38 /* Application */,
 				2CB471AA2B681F1800528E38 /* Storage */,
 				2CB471A62B681E1300528E38 /* NoteScreen */,
 				2CB471B82B694F8400528E38 /* MainScreen */,
-				2CB471A32B681C3400528E38 /* Application */,
 				2CB471A52B681CB100528E38 /* Resources  */,
 				2CB471A42B681C8700528E38 /* SupportingFiles */,
 			);
