@@ -24,6 +24,7 @@ final class NoteViewController: UIViewController {
 
     private let dataManager = DataManager.shared
     private let viewModel: NoteViewModel
+    private var isTappedSaveButton: Bool = false
 
     // MARK: - Initialization
 
@@ -79,22 +80,22 @@ final class NoteViewController: UIViewController {
         textView.text = viewModel.selectedNote?.text
     }
 
-    @objc private func doneButtonAction () {
+    @objc private func doneButtonAction() {
         view.endEditing(true)
     }
 
-    @objc private func saveButtonAction () {
+    @objc private func saveButtonAction() {
+        isTappedSaveButton = true
         viewModel.saveNote(text: textView.text)
         navigationItem.rightBarButtonItem?.isEnabled = false
     }
 
     @objc private func backButtonAction() {
-        if textView.text.isEmpty == true {
-            viewModel.popToRoot()
+        if (textView.text.isEmpty || isTappedSaveButton){
         } else {
             viewModel.saveNote(text: textView.text)
-            viewModel.popToRoot()
         }
+        viewModel.popToRoot()
     }
 }
 
@@ -102,7 +103,7 @@ final class NoteViewController: UIViewController {
 
 private extension NoteViewController {
     func setupNavigationBar() {
-        let leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"),
+        let leftBarButtonItem = UIBarButtonItem(image: R.Image.backButton,
                                                 style: .plain,
                                                 target: self,
                                                 action: #selector(backButtonAction)
@@ -123,7 +124,7 @@ private extension NoteViewController {
 
     @objc func keyboardWillShow(_ notification: Notification) {
         let userInfo = notification.userInfo
-        if let kbFrameSize = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue  {
+        if let kbFrameSize = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             let edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: kbFrameSize.height, right: 0)
             textView.contentInset = edgeInsets
             textView.scrollIndicatorInsets = edgeInsets
